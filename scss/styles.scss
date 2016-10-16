@@ -1,0 +1,180 @@
+/* header
+--------------------------------------------------------- */
+.header {
+    &__toggler {
+      float: left;
+    }
+}
+/* header END */
+
+/* content
+--------------------------------------------------------- */
+.content {
+  position: relative;
+
+  padding: 2rem 1rem;
+}
+/* content END */
+
+/* tasksList
+--------------------------------------------------------- */
+.tasksList {
+
+  .list-group {
+    position: relative;
+
+    &.loading {
+      .list-group-item {
+        opacity: .4;
+      }
+    }
+  }
+}
+/* tasksList END */
+
+/* detail
+--------------------------------------------------------- */
+.detail {
+
+  &__back {
+    display: block;
+    margin-top: -0.4rem;
+    margin-bottom: .8rem;
+
+    font-size: 14px;
+  }
+}
+/* detail END */
+
+/* loader
+--------------------------------------------------------- */
+  $green: #008744;
+  $blue: #0057e7;
+  $red: #d62d20;
+  $yellow: #ffa700;
+  $white: #eee;
+
+  // scaling... any units
+  $width: 60px;
+
+  // demo-specific
+  .showbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    padding: 2%;
+  }
+  // end demo-specific
+
+  .loader {
+    position: relative;
+    margin: 0 auto;
+    width: $width;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  .circular {
+    animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -124px;
+    }
+  }
+
+  @keyframes color {
+    100%,
+    0% {
+      stroke: $red;
+    }
+    40% {
+      stroke: $blue;
+    }
+    66% {
+      stroke: $green;
+    }
+    80%,
+    90% {
+      stroke: $yellow;
+    }
+  }
+/* loader END */
+
+/* main
+--------------------------------------------------------- */
+.main {
+  &__jumbotron {
+    border-radius: 0;
+    margin: 0;
+  }
+}
+/* main END */
+
+.lead-mini {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.small, small {
+  font-size: 70%;
+}
+
+html,body {
+  height: 100%;
+}
+
+
+@media screen and (min-width: 560px) {
+  body {
+    padding: 40px 0 0;
+  }
+
+  #root {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #cfcfcf;
+  }
+}
