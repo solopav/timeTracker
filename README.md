@@ -2,6 +2,7 @@ timeTracker
 ===============================
 
 Project portfolio on React &amp;&amp; Redux
+Приложение использует Google Drive Api и Sheets Api для записи и хранения данных в Google Sheets.
 
 
 Для установки склонировать репозиторий, и в корне запустить команду npm install
