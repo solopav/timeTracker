@@ -1,11 +1,15 @@
 timeTracker
 ===============================
 
-Project portfolio on React &amp;&amp; Redux
+Project portfolio on React &amp;&amp; Redux.
+
+http://timetracker.pubstorm.site/
+
+Приложение использует Google Drive Api и Sheets Api для записи и хранения данных в Google Sheets.
 
 
 Для установки склонировать репозиторий, и в корне запустить команду npm install
-Для запуска сборки используются комманда npm start из корневой дирректории
+Для запуска сборки используются команда npm start из корневой дирректории
 
 
 ###Directory structure
@@ -32,7 +36,7 @@ src
         TasksListContainer.js             - список тасок
         AppContainer.js                   - общий родительский компонент 
         
-    redusers                           - редьюсеры
+    reducers                           - редьюсеры
         index.js                          - rootReducer (combineReducers)
         Authorisation.js                  - для авторизации
         Detail.js                         - детальной страницы таски
@@ -41,10 +45,10 @@ src
         
     store                              - configureStore
     
-    untils                             - общие перемернные и функции
+    utils                              - общие перемернные и функции
         Actions.js                        - типы действий
         constants.js                      - общие константы
-        untils.js                         - общие функции
+        utils.js                          - общие функции
 
 scss
     styles.scss                        - общие стили
