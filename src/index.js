@@ -9,7 +9,7 @@ import { configureStore } from './store/configureStore'
 const { store, history } = configureStore();
 
 import AppContainer           from './containers/AppContainer'
-import AutherisationContainer from './containers/AutherisationContainer'
+import AuthorisationContainer from './containers/AuthorisationContainer'
 import TablesContainer        from './containers/TablesContainer'
 import TasksListContainer     from './containers/TasksListContainer'
 import DetailContainer        from './containers/DetailContainer'
@@ -19,7 +19,7 @@ render(
     (<Provider store={ store }>
         <Router history={history}>
             <Route path="/" component={ AppContainer }>
-                <IndexRoute component={ AutherisationContainer } />
+                <IndexRoute component={ AuthorisationContainer } />
                 <Route path="tables" component={ TablesContainer } />
                 <Route path="list" component={ TasksListContainer } />
                 <Route path="list/:id" component={ DetailContainer } />

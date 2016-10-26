@@ -1,11 +1,11 @@
-import * as types  from '../untils/Actions'
+import * as types  from '../utils/Actions'
 
 let initialState = {
     signedIn: false,
     loading: false
 };
 
-export const Autherisation = (state = initialState, action) => {
+export const Authorisation = (state = initialState, action) => {
     switch (action.type) {
         case types.SIGN_IN_SEND_QUERY:
             state = {

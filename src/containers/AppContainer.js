@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { Header } from '../components/Header'
-import AutherisationContainer from './AutherisationContainer'
-import { signOut } from '../actions/AutherisationActions'
+import AuthorisationContainer from './AuthorisationContainer'
+import { signOut } from '../actions/AuthorisationActions'
 
 class AppContainer extends Component {
     render() {
@@ -21,7 +21,7 @@ class AppContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    signedIn: state.Autherisation.signedIn
+    signedIn: state.Authorisation.signedIn
   }
 }
 

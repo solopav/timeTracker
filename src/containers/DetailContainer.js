@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 
 import { Loader } from '../components/Loader'
 import classNames from 'classnames'
-import { convertDateToSheetsDateString, toDateInputStr } from '../untils/untils'
+import { convertDateToSheetsDateString, toDateInputStr } from '../utils/untils'
 import { saveTask } from '../actions/DetailActions'
 
 

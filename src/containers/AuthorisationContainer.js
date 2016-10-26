@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { signIn, signOut } from '../actions/AutherisationActions'
+import { signIn, signOut } from '../actions/AuthorisationActions'
 
-class AutherisationContainer extends Component {
+class AuthorisationContainer extends Component {
     constructor(props) {
         super(props);
 
@@ -34,7 +34,7 @@ class AutherisationContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        signedIn: state.Autherisation.signedIn
+        signedIn: state.Authorisation.signedIn
     }
 };
 
@@ -49,4 +49,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AutherisationContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthorisationContainer);

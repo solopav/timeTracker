@@ -1,5 +1,5 @@
-import * as types from '../untils/Actions'
-import { CLIENT_ID, SCOPES, TABLE_ID } from '../untils/constants'
+import * as types from '../utils/Actions'
+import { CLIENT_ID, SCOPES, TABLE_ID } from '../utils/constants'
 import { browserHistory } from 'react-router'
 import axios from 'axios';
 
@@ -7,11 +7,9 @@ export function signIn(immediate) {
     return (dispatch) => {
         if (!gapi.auth) return;
 
-
         dispatch({
             type: types.SIGN_IN_SEND_QUERY
         });
-
 
         gapi.auth.authorize({
             client_id: CLIENT_ID,

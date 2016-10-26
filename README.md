@@ -16,7 +16,7 @@ dist
 src
     index.js
     actions                            - действия
-        AutherisationActions.js           - для авторизации
+        AuthorisationActions.js           - для авторизации
         DetailActions.js                  - детальной страницы таска
         TablesActions.js                  - выбора таблицы
         TasksListActions.js               - списка тасков
@@ -26,7 +26,7 @@ src
         Loader.js                         - анимированный прелоадер
         
     containers                         - container
-        AutherisationContainer.js         - авторизация через гугл
+        AuthorisationContainer.js         - авторизация через гугл
         DetailContainer.js                - детальная страница таски
         TablesContainer.js                - список таблиц/создать новую
         TasksListContainer.js             - список тасок
@@ -34,7 +34,7 @@ src
         
     redusers                           - редьюсеры
         index.js                          - rootReducer (combineReducers)
-        Autherisation.js                  - для авторизации
+        Authorisation.js                  - для авторизации
         Detail.js                         - детальной страницы таски
         Tables.js                         - списка таблиц
         TasksList.js                      - списка тасок

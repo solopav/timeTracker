@@ -1,4 +1,4 @@
-import * as types  from '../untils/Actions'
+import * as types  from '../utils/Actions'
 
 let initialState = {
     loading: false

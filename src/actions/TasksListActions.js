@@ -1,5 +1,5 @@
-import * as types from '../untils/Actions'
-import { CLIENT_ID, SCOPES, TABLE_ID } from '../untils/constants'
+import * as types from '../utils/Actions'
+import { CLIENT_ID, SCOPES, TABLE_ID } from '../utils/constants'
 import { browserHistory } from 'react-router'
 
 export function getTasks(id) {

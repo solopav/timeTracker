@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f59fe75869c715355a65"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e06eb4dd601ac51b3423"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -10345,7 +10345,7 @@
 	
 	var _reactRouterRedux = __webpack_require__(228);
 	
-	var _Autherisation = __webpack_require__(516);
+	var _Authorisation = __webpack_require__(516);
 	
 	var _TasksList = __webpack_require__(519);
 	
@@ -10354,7 +10354,7 @@
 	var _Detail = __webpack_require__(517);
 	
 	var rootReducer = exports.rootReducer = (0, _redux.combineReducers)({
-	    Autherisation: _Autherisation.Autherisation,
+	    Authorisation: _Authorisation.Authorisation,
 	    TasksList: _TasksList.TasksList,
 	    Tables: _Tables.Tables,
 	    Detail: _Detail.Detail,
@@ -15581,7 +15581,7 @@
 	    };
 	}
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(19); if (makeExportsHot(module, __webpack_require__(3))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AutherisationActions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(19); if (makeExportsHot(module, __webpack_require__(3))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AuthorisationActions.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)(module)))
 
 /***/ },
@@ -15604,7 +15604,7 @@
 	
 	var _reactRedux = __webpack_require__(80);
 	
-	var _AutherisationActions = __webpack_require__(222);
+	var _AuthorisationActions = __webpack_require__(222);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -15614,19 +15614,19 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var AutherisationContainer = function (_Component) {
-	    _inherits(AutherisationContainer, _Component);
+	var AuthorisationContainer = function (_Component) {
+	    _inherits(AuthorisationContainer, _Component);
 	
-	    function AutherisationContainer(props) {
-	        _classCallCheck(this, AutherisationContainer);
+	    function AuthorisationContainer(props) {
+	        _classCallCheck(this, AuthorisationContainer);
 	
-	        var _this = _possibleConstructorReturn(this, (AutherisationContainer.__proto__ || Object.getPrototypeOf(AutherisationContainer)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (AuthorisationContainer.__proto__ || Object.getPrototypeOf(AuthorisationContainer)).call(this, props));
 	
 	        _this.props.signIn(true);
 	        return _this;
 	    }
 	
-	    _createClass(AutherisationContainer, [{
+	    _createClass(AuthorisationContainer, [{
 	        key: 'render',
 	        value: function render() {
 	            var _this2 = this;
@@ -15672,29 +15672,29 @@
 	        }
 	    }]);
 	
-	    return AutherisationContainer;
+	    return AuthorisationContainer;
 	}(_react.Component);
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        signedIn: state.Autherisation.signedIn
+	        signedIn: state.Authorisation.signedIn
 	    };
 	};
 	
 	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	    return {
 	        signIn: function signIn(immediate) {
-	            dispatch((0, _AutherisationActions.signIn)(immediate));
+	            dispatch((0, _AuthorisationActions.signIn)(immediate));
 	        },
 	        signOut: function signOut() {
-	            dispatch((0, _AutherisationActions.signOut)());
+	            dispatch((0, _AuthorisationActions.signOut)());
 	        }
 	    };
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AutherisationContainer);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AuthorisationContainer);
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(19); if (makeExportsHot(module, __webpack_require__(3))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AutherisationContainer.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(19); if (makeExportsHot(module, __webpack_require__(3))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "AuthorisationContainer.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)(module)))
 
 /***/ },
@@ -28043,11 +28043,11 @@
 	
 	var _Header = __webpack_require__(510);
 	
-	var _AutherisationContainer = __webpack_require__(223);
+	var _AuthorisationContainer = __webpack_require__(223);
 	
-	var _AutherisationContainer2 = _interopRequireDefault(_AutherisationContainer);
+	var _AuthorisationContainer2 = _interopRequireDefault(_AuthorisationContainer);
 	
-	var _AutherisationActions = __webpack_require__(222);
+	var _AuthorisationActions = __webpack_require__(222);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28087,14 +28087,14 @@
 	
 	var mapStateToProps = function mapStateToProps(state) {
 	    return {
-	        signedIn: state.Autherisation.signedIn
+	        signedIn: state.Authorisation.signedIn
 	    };
 	};
 	
 	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 	    return {
 	        signOut: function signOut() {
-	            dispatch((0, _AutherisationActions.signOut)());
+	            dispatch((0, _AuthorisationActions.signOut)());
 	        }
 	    };
 	};
@@ -28611,9 +28611,9 @@
 	
 	var _AppContainer2 = _interopRequireDefault(_AppContainer);
 	
-	var _AutherisationContainer = __webpack_require__(223);
+	var _AuthorisationContainer = __webpack_require__(223);
 	
-	var _AutherisationContainer2 = _interopRequireDefault(_AutherisationContainer);
+	var _AuthorisationContainer2 = _interopRequireDefault(_AuthorisationContainer);
 	
 	var _TablesContainer = __webpack_require__(513);
 	
@@ -28648,7 +28648,7 @@
 	        _react2.default.createElement(
 	            _reactRouter.Route,
 	            { path: '/', component: _AppContainer2.default },
-	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _AutherisationContainer2.default }),
+	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _AuthorisationContainer2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'tables', component: _TablesContainer2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'list', component: _TasksListContainer2.default }),
 	            _react2.default.createElement(_reactRouter.Route, { path: 'list/:id', component: _DetailContainer2.default }),
@@ -28671,7 +28671,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.Autherisation = undefined;
+	exports.Authorisation = undefined;
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
@@ -28686,7 +28686,7 @@
 	    loading: false
 	};
 	
-	var Autherisation = exports.Autherisation = function Autherisation() {
+	var Authorisation = exports.Authorisation = function Authorisation() {
 	    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 	    var action = arguments[1];
 	
@@ -28717,7 +28717,7 @@
 	    return state;
 	};
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(19); if (makeExportsHot(module, __webpack_require__(3))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Autherisation.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(19); if (makeExportsHot(module, __webpack_require__(3))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Authorisation.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)(module)))
 
 /***/ },
