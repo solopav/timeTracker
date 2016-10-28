@@ -7,20 +7,20 @@ let initialState = {
 
 export const Authorisation = (state = initialState, action) => {
     switch (action.type) {
-        case types.SIGN_IN_SEND_QUERY:
+        case types.SIGN_IN.REQUEST:
             state = {
                 ...state,
                 loading: true
             };
             break;
-        case types.SIGN_IN_OK:
+        case types.SIGN_IN.SUCCESS:
             state = {
                 ...state,
                 signedIn: true,
                 loading: false
             };
             break;
-        case types.SIGN_IN_ERROR:
+        case types.SIGN_IN.ERROR:
             state = {
                 ...state,
                 signedIn: false,

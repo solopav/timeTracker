@@ -8,7 +8,7 @@ export function signIn(immediate) {
         if (!gapi.auth) return;
 
         dispatch({
-            type: types.SIGN_IN_SEND_QUERY
+            type: types.SIGN_IN.REQUEST
         });
 
         gapi.auth.authorize({
@@ -22,7 +22,7 @@ export function signIn(immediate) {
                 loadAPIs();
             } else {
                 dispatch({
-                    type: types.SIGN_IN_ERROR
+                    type: types.SIGN_IN.ERROR
                 });
             }
         }
@@ -33,7 +33,7 @@ export function signIn(immediate) {
 
             gapi.client.load('drive', 'v3', function(data) {
                 dispatch({
-                    type: types.SIGN_IN_OK
+                    type: types.SIGN_IN.SUCCESS
                 });
 
                 const path = `/tables/`;
@@ -46,6 +46,7 @@ export function signIn(immediate) {
 export function signOut() {
     return (dispatch) => {
       var token = gapi.auth.getToken();
+
       if (token) {
         var accessToken = gapi.auth.getToken().access_token;
         if (accessToken) {
@@ -56,6 +57,7 @@ export function signOut() {
           });
         }
       }
+        
       gapi.auth.setToken(null);
       gapi.auth.signOut();
 

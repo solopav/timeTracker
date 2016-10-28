@@ -23,7 +23,7 @@ const mapStateToProps = (state) => {
   return {
     signedIn: state.Authorisation.signedIn
   }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -31,6 +31,6 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(signOut());
         }
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

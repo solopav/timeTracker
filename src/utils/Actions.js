@@ -1,4 +1,14 @@
-// Autherisation
+function createRequestTypes(base) {
+    return {
+        REQUEST : `${base}_REQUEST`,
+        SUCCESS : `${base}_SUCCESS`,
+        ERROR   : `${base}_ERROR`
+    }
+}
+
+// Authorisation
+export const SIGN_IN = createRequestTypes('SIGN_IN');
+
 export const SIGN_IN_SEND_QUERY           = 'SIGN_IN_SEND_QUERY';
 export const SIGN_IN_OK                   = 'SIGN_IN_OK';
 export const SIGN_IN_ERROR                = 'SIGN_IN_ERROR';

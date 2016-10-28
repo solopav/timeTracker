@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e06eb4dd601ac51b3423"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2fe89768e613abc9518f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -5131,9 +5131,19 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
-	// Autherisation
+	function createRequestTypes(base) {
+	    return {
+	        REQUEST: base + '_REQUEST',
+	        SUCCESS: base + '_SUCCESS',
+	        ERROR: base + '_ERROR'
+	    };
+	}
+	
+	// Authorisation
+	var SIGN_IN = exports.SIGN_IN = createRequestTypes('SIGN_IN');
+	
 	var SIGN_IN_SEND_QUERY = exports.SIGN_IN_SEND_QUERY = 'SIGN_IN_SEND_QUERY';
 	var SIGN_IN_OK = exports.SIGN_IN_OK = 'SIGN_IN_OK';
 	var SIGN_IN_ERROR = exports.SIGN_IN_ERROR = 'SIGN_IN_ERROR';
@@ -15522,7 +15532,7 @@
 	        if (!gapi.auth) return;
 	
 	        dispatch({
-	            type: types.SIGN_IN_SEND_QUERY
+	            type: types.SIGN_IN.REQUEST
 	        });
 	
 	        gapi.auth.authorize({
@@ -15536,7 +15546,7 @@
 	                loadAPIs();
 	            } else {
 	                dispatch({
-	                    type: types.SIGN_IN_ERROR
+	                    type: types.SIGN_IN.ERROR
 	                });
 	            }
 	        }
@@ -15547,7 +15557,7 @@
 	
 	            gapi.client.load('drive', 'v3', function (data) {
 	                dispatch({
-	                    type: types.SIGN_IN_OK
+	                    type: types.SIGN_IN.SUCCESS
 	                });
 	
 	                var path = '/tables/';
@@ -15560,6 +15570,7 @@
 	function signOut() {
 	    return function (dispatch) {
 	        var token = gapi.auth.getToken();
+	
 	        if (token) {
 	            var accessToken = gapi.auth.getToken().access_token;
 	            if (accessToken) {
@@ -15570,6 +15581,7 @@
 	                });
 	            }
 	        }
+	
 	        gapi.auth.setToken(null);
 	        gapi.auth.signOut();
 	
@@ -28691,18 +28703,18 @@
 	    var action = arguments[1];
 	
 	    switch (action.type) {
-	        case types.SIGN_IN_SEND_QUERY:
+	        case types.SIGN_IN.REQUEST:
 	            state = _extends({}, state, {
 	                loading: true
 	            });
 	            break;
-	        case types.SIGN_IN_OK:
+	        case types.SIGN_IN.SUCCESS:
 	            state = _extends({}, state, {
 	                signedIn: true,
 	                loading: false
 	            });
 	            break;
-	        case types.SIGN_IN_ERROR:
+	        case types.SIGN_IN.ERROR:
 	            state = _extends({}, state, {
 	                signedIn: false,
 	                loading: false
