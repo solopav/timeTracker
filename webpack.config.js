@@ -2,7 +2,6 @@ var path = require('path')
 var webpack = require('webpack')
 var NpmInstallPlugin = require('npm-install-webpack-plugin')
 var autoprefixer = require('autoprefixer');
-//var precss = require('precss');
 
 module.exports = {
   devtool: 'source-map',

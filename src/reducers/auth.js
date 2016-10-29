@@ -1,4 +1,4 @@
-import * as types  from '../utils/Actions'
+import * as types  from '../constants/ActionsTypes'
 
 let initialState = {
     signedIn: false,

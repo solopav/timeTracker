@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import { getTasks, setCurrent } from '../actions/TasksListActions'
+import { getTasks, setCurrent } from '../actions/taskListActions'
 import { Loader } from '../components/Loader'
 import classNames from 'classnames'
 

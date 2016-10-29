@@ -1,5 +1,5 @@
-import * as types from '../utils/Actions'
-import { CLIENT_ID, SCOPES, TABLE_ID } from '../utils/constants'
+import * as types from '../constants/ActionsTypes'
+import { CLIENT_ID, SCOPES, TABLE_ID } from '../constants/Config'
 import { browserHistory } from 'react-router'
 
 

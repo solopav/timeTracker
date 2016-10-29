@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { Header } from '../components/Header'
-import AuthorisationContainer from './AuthorisationContainer'
-import { signOut } from '../actions/AuthorisationActions'
+import AuthContainer from './AuthContainer'
+import { signOut } from '../actions/authActions'
 
 class AppContainer extends Component {
     render() {

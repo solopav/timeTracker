@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 import { Loader } from '../components/Loader'
 import classNames from 'classnames'
 import { convertDateToSheetsDateString, toDateInputStr } from '../utils/untils'
-import { saveTask } from '../actions/DetailActions'
+import { saveTask } from '../actions/detailActions'
 
 
 class DetailContainer extends Component {

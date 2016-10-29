@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 
 import { Loader } from '../components/Loader'
 import classNames from 'classnames'
-import { checkLocalStorage, createTable, setCurrentTable } from '../actions/TablesActions'
+import { checkLocalStorage, createTable, setCurrentTable } from '../actions/tablesActions'
 
 class TablesContainer extends Component {
     constructor(props) {
