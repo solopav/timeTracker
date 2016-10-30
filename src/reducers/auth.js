@@ -5,7 +5,7 @@ let initialState = {
     loading: false
 };
 
-export const Authorisation = (state = initialState, action) => {
+export const Auth = (state = initialState, action) => {
     switch (action.type) {
         case types.SIGN_IN.REQUEST:
             state = {

@@ -21,7 +21,7 @@ class AppContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    signedIn: state.Authorisation.signedIn
+    signedIn: state.Auth.signedIn
   }
 };
 
