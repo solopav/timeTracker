@@ -6,19 +6,19 @@ let initialState = {
 
 export const Detail = (state = initialState, action) => {
     switch (action.type) {
-        case types.SAVE_TASK_REQUEST:
+        case types.SAVE_TASK.REQUEST:
             state = {
                 ...state,
                 loading: true
             };
             break;
-        case types.SAVE_TASK_OK:
+        case types.SAVE_TASK.SUCCESS:
             state = {
                 ...state,
                 loading: false
             };
             break;
-        case types.SAVE_TASK_ERROR:
+        case types.SAVE_TASK.ERROR:
             state = {
                 ...state,
                 loading: false

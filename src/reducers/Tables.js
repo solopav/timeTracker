@@ -2,30 +2,35 @@ import * as types  from '../constants/ActionsTypes'
 
 let initialState = {
 	currentTable: '',
-	loading: true
+	list: [],
+	loading: false
 };
 
 export const Tables = (state = initialState, action) => {
 	switch (action.type) {
-		case types.CHECK_LOCALSTORAGE:
+		case types.CREATE_TABLE.REQUEST:
 			state = {
 				...state,
-				currentTable: action.payload,
+				loading: true
+			};
+			break;
+		case types.CREATE_TABLE.SUCCESS:
+			state = {
+				...state,
 				loading: false
 			};
 			break;
-		case types.SET_CURRENT_TABLE:
+		case types.SET_LAST_TABLE:
 			state = {
 				...state,
-				currentTable: action.payload,
-				loading: false
-			};
+				currentTable: action.payload
+			}
 			break;
-		case types.CHECK_LOCALSTORAGE_END:
+		case types.SET_LIST_TABLES:
 			state = {
 				...state,
-				loading: false
-			};
+				list: action.payload
+			}
 			break;
 	}
 	return state;

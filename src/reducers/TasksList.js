@@ -8,19 +8,19 @@ let initialState = {
 
 export const TasksList = (state = initialState, action) => {
 	switch (action.type) {
-		case types.GET_TASKS_REQUEST:
+		case types.GET_TASKS.REQUEST:
 			state = {
 				...state,
 				loading: true
 			};
 			break;
-		case types.GET_TASKS_ERROR:
+		case types.GET_TASKS.ERROR:
 			state = {
 				...state,
 				loading: false
 			};
 			break;
-		case types.GET_TASKS_OK:
+		case types.GET_TASKS.SUCCESS:
 			state = {
 				...state,
 				loading: false,
